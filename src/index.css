@@ -23,16 +23,17 @@ a:hover {
 }
 
 body {
-  margin: 0;
+  padding: 20px;
+  font-size: 18px;
+  line-height: inherit;
   display: flex;
   /* place-items: center; */
   min-width: 320px;
   min-height: 100vh;
-  padding: 20px 40px;
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 3em;
   line-height: 1.1;
 }
 
@@ -43,8 +44,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 /* button {
