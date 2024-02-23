@@ -3,16 +3,16 @@ import { useId } from 'react';
 import css from './SearchBox.module.css';
 
 const SearchBox = ({ onChange }) => {
-  const searchLine = useId();
+  const filterFieldId = useId();
 
   return (
     <div className={css.searhbox}>
-      <label htmlFor={searchLine}>Find contacts by name</label>
+      <label htmlFor={filterFieldId}>Find contacts by name</label>
       <input
-        id={searchLine}
+        id={filterFieldId} 
         type="text"
         onChange={onChange}
-        className={css.inputLine}
+        className={css.input}
       />
     </div>
   );

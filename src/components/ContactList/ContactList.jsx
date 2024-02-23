@@ -1,14 +1,12 @@
 import css from './ContactList.module.css'
-
-// import contacts from '../../contacts.json';
 import Contact from '../Contact/Contact';
 
-const ContactList = ({ contacts }) => {
+const ContactList = ({ contacts, delContact }) => {
   return (
     <ul className={css.list}>
       {contacts.map((contact) => (
         <li key={contact.id} className={css.item}>
-          <Contact contact={contact} />
+          <Contact contact={contact} delContact={delContact} />
         </li>
       ))}
     </ul>
