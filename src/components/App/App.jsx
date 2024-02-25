@@ -86,7 +86,7 @@ const App = () => {
       <ContactForm onAdd={addContact} />
       <SearchBox value={filterContacts} onChange={setFilterContacts} />
       <ContactList contacts={visibleContacts} onDelete={delContact} />
-      <ToastContainer />
+      <ToastContainer position="top-left" />
     </>
   );
 };
