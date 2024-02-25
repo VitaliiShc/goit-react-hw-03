@@ -2,16 +2,18 @@ import { useId } from 'react';
 
 import css from './SearchBox.module.css';
 
-const SearchBox = ({ onChange }) => {
-  const filterFieldId = useId();
+const SearchBox = ({ value, onChange }) => {
+  const SearchBarId = useId();
 
   return (
     <div className={css.searhbox}>
-      <label htmlFor={filterFieldId}>Find contacts by name</label>
+      <label htmlFor={SearchBarId}>Find contacts by name</label>
       <input
-        id={filterFieldId} 
+        id={SearchBarId}
+        name="SearchBar"
         type="text"
-        onChange={onChange}
+        value={value}
+        onChange={(evt) => onChange(evt.target.value)}
         className={css.input}
       />
     </div>

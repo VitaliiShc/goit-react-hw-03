@@ -14,6 +14,7 @@
 .label {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-weight: 600;
 }
 
@@ -35,6 +36,8 @@
 
 .error {
   color: red;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .btn {
