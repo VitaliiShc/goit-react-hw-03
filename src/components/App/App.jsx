@@ -83,7 +83,6 @@ const App = () => {
   return (
     <>
       <h1>Phonebook</h1>
-      <button onClick={notify}>Notify!</button>
       <ContactForm onAdd={addContact} />
       <SearchBox value={filterContacts} onChange={setFilterContacts} />
       <ContactList contacts={visibleContacts} onDelete={delContact} />
