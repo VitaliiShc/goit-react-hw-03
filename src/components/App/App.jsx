@@ -1,14 +1,13 @@
 import './App.css';
-import { useEffect, useState } from 'react';
-
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
-// import { nanoid } from 'nanoid'; // for Case 2
+import { useEffect, useState } from 'react';
 
 import ContactForm from '../ContactForm/ContactForm';
 import ContactList from '../ContactList/ContactList';
 import SearchBox from '../SearchBox/SearchBox';
+
+// import { nanoid } from 'nanoid'; // for Case 2
 
 /* // test data
 const testData = [
@@ -63,7 +62,7 @@ const App = () => {
   };
   // End of case 1
 
-  /*   //  Case 2 (good for UX): the form is not reseted if there already is contact and user can change contact's name. the form is reseted only after added a new contact
+  /*   //  Case 2 (good for UX, but it`s without back-end - contact list validation is performed on the front-end): the form is not reseted if there already is contact and user can change contact's name. the form is reseted only after added a new contact
   const addContact = (values, actions) => {
     const newContact = { id: nanoid(), ...values };
     if (
