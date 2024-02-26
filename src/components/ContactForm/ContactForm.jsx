@@ -1,7 +1,7 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { useId } from 'react';
-import { nanoid } from 'nanoid'; // for Case 2
+import { nanoid } from 'nanoid';
 import css from './ContactForm.module.css';
 
 const ContactForm = ({ onAdd }) => {
@@ -25,18 +25,15 @@ const ContactForm = ({ onAdd }) => {
       .matches(/^[0-9-]+$/, 'Numbers and dashes only'),
   });
 
-  // Case 1: the form reloads in any case, even if there is already a contact
   const handleSubmit = (values, actions) => {
     onAdd({ id: nanoid(), ...values });
     actions.resetForm();
   };
-  // End of case 1
 
   return (
     <Formik
       initialValues={initialValues}
-      // onSubmit={onAdd} // for Case 1
-      onSubmit={handleSubmit} // for Case 2
+      onSubmit={handleSubmit}
       validationSchema={ContactFormSchema}
     >
       <Form className={css.form}>

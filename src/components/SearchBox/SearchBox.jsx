@@ -6,7 +6,7 @@ const SearchBox = ({ value, onChange }) => {
   const SearchBarId = useId();
 
   return (
-    <div className={css.searhbox}>
+    <div className={css.searchbox}>
       <label htmlFor={SearchBarId}>Find contacts by name</label>
       <input
         id={SearchBarId}
